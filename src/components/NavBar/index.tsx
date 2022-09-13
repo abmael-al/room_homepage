@@ -33,7 +33,7 @@ const ActionButton = ({ onClick, action }: ActionButtonProps) => {
 const NavItem = ({ text, link }: NavItemProps) => {
     return (
         <li className='navigation-item'>
-            <a href={link}>{text}</a>
+            <a href={link} className='navigation-item-anchor'>{ text }</a>
         </li>
     )
 }
