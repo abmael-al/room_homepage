@@ -195,3 +195,35 @@ body {
         --clr-anchor: var(--clr-neutral-100);
     }
 }
+
+/* -------------- */
+/* SITE-SPECIFIC  */
+/* -------------- */
+/* HOME: hero section */
+.hero-header {
+    --columns-width: 45% 55%;
+
+    inline-size: 100%;
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: var(--columns-width);
+    align-items: center;
+}
+
+.hero-header .logo {
+    --grid-column: 2 / 3;
+
+    grid-column: var(--grid-column);
+    justify-self: start;
+}
+
+@media (min-width: 48em) {
+    .hero-header {
+        --columns-width: 12.5% 87.5%;
+    }
+
+    .hero-header .logo {
+        --grid-column: 1 / 2;
+    }
+}
