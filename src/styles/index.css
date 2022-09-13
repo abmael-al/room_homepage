@@ -132,6 +132,14 @@ body {
 /* -------------- */
 /* COMPONENTS     */
 /* -------------- */
+/* LOGO */
+.logo {
+    font-size: var(--fs-500);
+    font-weight: var(--fw-medium);
+    text-transform: lowercase;
+    color: var(--clr-neutral-100);
+}
+
 .navigation-bar-mobile {
     --padding-100: 1.25rem;
     --padding-200: 2.5rem;
