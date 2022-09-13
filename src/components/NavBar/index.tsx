@@ -33,7 +33,7 @@ const ActionButton = ({ onClick, action }: ActionButtonProps) => {
 const NavItem = ({ text, link }: NavItemProps) => {
     return (
         <li className='navigation-item'>
-            <a href={link} className='navigation-item-anchor'>{ text }</a>
+            <a href={link} className='navigation-item-anchor'>{text}</a>
         </li>
     )
 }
@@ -60,7 +60,7 @@ const NavBarMobile = () => {
 
     return (
         <div className="navigation-bar-mobile">
-            <div className={isNavHidden ? 'block' : 'hidden'}>
+            <div>
                 <ActionButton action='open' onClick={onClickHandler} />
             </div>
 
