@@ -1,11 +1,13 @@
 import { NavBar } from "../../components/NavBar"
+import { Logo } from "../../components/Logo"
 
 const HeroSection = () => {
     return (
         <section>
-            <div>
+            <header className="hero-header">
+                <Logo />
                 <NavBar />
-            </div>
+            </header>
         </section>
     )
 }
