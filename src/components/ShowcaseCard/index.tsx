@@ -3,24 +3,28 @@ import { PrimaryButton } from "../PrimaryButton"
 interface ShowcaseCardProps {
     title: string;
     supportingText: string;
-    thumbnail: string;
+    smallImage: string;
+    largeImage: string;
+    smallImageWidth: number;
+    largeImageWidth: number;
 }
 
-const ShowcaseCard = ({ title, supportingText, thumbnail }: ShowcaseCardProps) => {
+const ShowcaseCard = ({ title, supportingText, smallImage, largeImage, smallImageWidth, largeImageWidth }: ShowcaseCardProps) => {
     return (
-        <div>
-            <div className="showcase-card-thumbnail">
+        <div className="showcase-card">
+            <figure className="showcase-card-thumbnail">
                 <img 
-                    src={thumbnail}
+                    src={smallImage}
                     alt=""
-                    loading="lazy"
-                    decoding="async"
+                    loading="eager"
+                    decoding="sync"
+                    srcSet={`${smallImage} ${smallImageWidth}w,
+                            ${largeImage} ${largeImageWidth}w`}
                 />
-            </div>
+            </figure>
             <div className="showcase-card-body">
-                <h2 className="showcase-card-title">{title}</h2>
+                <h2 className="showcase-card-title primary-heading">{title}</h2>
                 <p className="showcase-card-supporint-text">{supportingText}</p>
-                
                 <PrimaryButton />
             </div>
         </div>
