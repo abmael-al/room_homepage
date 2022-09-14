@@ -115,19 +115,34 @@ body {
     background-color: var(--clr-neutral-700);
 }
 
-/* -------------- */
-/* RESETS         */
-/* -------------- */
+/* --------------- */
+/* UTILITY CLASSES */
+/* --------------- */
+/* positioning */
 .relative { position: relative; }
+
 .absolute { position: absolute; }
 
+/* display */
 .grid { display: grid; }
+
 .flex { display: flex; }
+
 .block { display: block; }
+
 .hidden { display: none; }
 
 .flow-column { grid-auto-flow: column; }
+
 .place-center { place-items: center; }
+
+/* others */
+.container {
+    --max-width: 1110px;
+
+    inline-size: var(--max-width);
+    margin-inline: auto;
+}
 
 /* -------------- */
 /* COMPONENTS     */
