@@ -2,7 +2,6 @@ import { ReactComponent as ClosingIcon } from '../../assets/icons/icon-close.svg
 import { ReactComponent as OpeningIcon } from '../../assets/icons/icon-open.svg';
 
 import { useState } from 'react';
-import { useWindowSize } from '../../hooks/useWindowSize'
 
 interface NavItemProps {
     text: string;
@@ -66,7 +65,6 @@ const NavBarMobile = () => {
 
             <div className={isNavHidden ? 'hidden' : 'flex overlay'}>
                 <ActionButton action='close' onClick={onClickHandler} />
-                
                 <NavList />
             </div>
         </div>
@@ -82,15 +80,10 @@ const NavBarDesktop = () => {
 }
 
 const NavBar = () => {
-    const DESKTOP_BREAK_POINT = 768;
-    const windowSize = useWindowSize();
-
     return (
         <>
-            {(windowSize.width > DESKTOP_BREAK_POINT) 
-                ? <NavBarDesktop />
-                : <NavBarMobile />
-            }
+            <NavBarDesktop />
+            <NavBarMobile />
         </>
     )
 }

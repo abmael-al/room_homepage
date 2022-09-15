@@ -161,10 +161,6 @@ body {
     --padding-200: 2.5rem;
 }
 
-.navigation-bar-mobile > :first-child {
-    padding-block: var(--padding-200);
-}
-
 .navigation-bar-mobile > :last-child {
     inline-size: 100%;
     padding-inline: var(--padding-100);
@@ -181,8 +177,7 @@ body {
 }
 
 .navigation-bar-desktop {
-    inline-size: max-content;
-    padding-block: 3.5rem;
+    display: none;
 }
 
 .navigation-list {
@@ -205,6 +200,15 @@ body {
 }
 
 @media (min-width: 48em) {
+    .navigation-bar-mobile {
+        display: none;
+    }
+
+    .navigation-bar-desktop {
+        inline-size: max-content;
+        display: block;
+    }
+
     .navigation-list {
         --gap: 2rem;
         --clr-anchor: var(--clr-neutral-100);
