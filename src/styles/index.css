@@ -137,6 +137,14 @@ body {
 
 .place-center { place-items: center; }
 
+/* typography */
+.primary-heading {
+    font-family: var(--ff-primary-heading);
+    font-weight: var(--fw-primary-heading);
+    font-size: var(--fs-primary-heading);
+    color: var(--clr-neutral-900);
+}
+
 /* others */
 .container {
     --max-width: 1110px;
