@@ -1,6 +1,15 @@
-const PrimaryButton = () => {
+import { ReactComponent as Arrow } from "../../assets/icons/icon-arrow.svg"
+
+interface PrimaryButtonProps {
+    text: string;
+}
+
+const PrimaryButton = ({ text }: PrimaryButtonProps) => {
     return (
-        <button>{'ABC ->'}</button>
+        <button className='primary-button'>
+            {text}
+            <Arrow />
+        </button>
     )
 }
 

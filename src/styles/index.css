@@ -148,6 +148,18 @@ body {
 /* -------------- */
 /* COMPONENTS     */
 /* -------------- */
+/* PRIMARY BUTTON */
+.primary-button {
+    display: flex;
+    place-items: center;
+    gap: 1rem;
+
+    font-size: var(--fs-300);
+    text-transform: uppercase;
+    letter-spacing: 12px;
+    color: var(--clr-neutral-800);
+}
+
 /* NAVIGATION */
 .navigation-bar-mobile {
     --padding-100: 1.25rem;
