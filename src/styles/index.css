@@ -140,7 +140,7 @@ body {
 .container {
     --max-width: 1110px;
 
-    inline-size: var(--max-width);
+    max-inline-size: var(--max-width);
     margin-inline: auto;
 }
 
