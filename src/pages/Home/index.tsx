@@ -1,14 +1,14 @@
 import { NavBar } from "../../components/NavBar"
-import { Logo } from "../../components/Logo"
+import { ReactComponent as Logo } from "../../assets/icons/logo.svg"
 
 const HeroSection = () => {
     return (
-        <section>
+        <main>
             <header className="hero-header">
-                <Logo />
+                <Logo className="logo" />
                 <NavBar />
             </header>
-        </section>
+        </main>
     )
 }
 
