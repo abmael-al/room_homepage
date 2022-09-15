@@ -256,14 +256,18 @@ body {
 /* -------------- */
 /* HOME: hero section */
 .hero-header {
-    --columns-width: 45% 55%;
+    --columns-width: 43.5% 57.5%;
 
     inline-size: 100%;
+    padding-inline: 1.25rem;
+    padding-block-start: 2.5rem;
 
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: var(--columns-width);
     align-items: center;
+
+    position: absolute;
 }
 
 .hero-header .logo {
@@ -275,7 +279,12 @@ body {
 
 @media (min-width: 48em) {
     .hero-header {
-        --columns-width: 12.5% 87.5%;
+        --columns-width: auto;
+        
+        inline-size: max-content;
+        padding-inline-start: 3rem;
+        
+        gap: 3rem;
     }
 
     .hero-header .logo {
