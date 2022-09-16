@@ -219,7 +219,7 @@ body {
     border-block-end: 2px solid var(--clr-anchor);
 }
 
-@media (min-width: 48em) {
+@media (min-width: 40em) {
     .navigation-bar-mobile {
         display: none;
     }
@@ -280,7 +280,7 @@ body {
     --columns-width: 43.5% 57.5%;
 
     inline-size: 100%;
-    padding-inline: 1.25rem;
+    padding-inline-start: 1.5rem;
     padding-block-start: 2.5rem;
 
     display: grid;
@@ -298,17 +298,23 @@ body {
     justify-self: start;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 40em) {
     .hero-header {
         --columns-width: auto;
         
         inline-size: max-content;
-        padding-inline-start: 3rem;
         
         gap: 3rem;
     }
 
     .hero-header .logo {
         --grid-column: 1 / 2;
+    }
+}
+
+@media (min-width: 56.25em) {
+    .hero-header {
+        padding-inline-start: 3.5rem;
+        padding-block-start: 3.5rem;
     }
 }
