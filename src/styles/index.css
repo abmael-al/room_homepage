@@ -166,13 +166,13 @@ body {
 /* PRIMARY BUTTON */
 .primary-button {
     display: flex;
-    place-items: center;
     gap: 1rem;
 
     font-size: var(--fs-300);
+    font-weight: var(--fw-semi-bold);
     text-transform: uppercase;
     letter-spacing: 12px;
-    color: var(--clr-neutral-800);
+    color: var(--clr-neutral-900);
 }
 
 /* NAVIGATION */
