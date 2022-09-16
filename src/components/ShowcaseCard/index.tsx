@@ -23,9 +23,11 @@ const ShowcaseCard = ({ title, supportingText, smallImage, largeImage, smallImag
                 />
             </figure>
             <div className="showcase-card-body">
-                <h2 className="showcase-card-title primary-heading">{title}</h2>
-                <p className="showcase-card-supporint-text">{supportingText}</p>
-                <PrimaryButton />
+                <div className="wrapper">
+                    <h2 className="showcase-card-title primary-heading">{title}</h2>
+                    <p className="showcase-card-supporting-text">{supportingText}</p>
+                    <PrimaryButton text='shop now' />
+                </div>
             </div>
         </div>
     )

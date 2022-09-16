@@ -247,28 +247,60 @@ body {
     grid-template-columns: var(--columns);
 }
 
-.showcase-card-body {
-    --padding: 1rem;
-
-    padding: var(--padding);
+.showcase-card > .showcase-card-body {
+    display: grid;
+    place-items: center;
 
     background-color: var(--clr-neutral-100);
 }
 
-@media (min-width: 48em) {
+.showcase-card > .showcase-card-body > .wrapper {
+    --padding: 3rem;
+
+    padding-inline: calc(var(--padding) * 0.5);
+    padding-block: var(--padding);
+
+    display: grid;
+    gap: 1.25rem;
+}
+
+.showcase-card > .showcase-card-body .showcase-card-supporting-text {
+    font-size: var(--fs-300);
+    font-weight: var(--fw-medium);
+    line-height: 1.5;
+    color: var(--clr-neutral-700);
+}
+
+@media (min-width: 56.25em) {
     .showcase-card {
         --flow: column;
         --columns: repeat(5, 1fr);
     }
 
-    .showcase-card-thumbnail {
+    .showcase-card > .showcase-card-thumbnail {
         grid-column: 1 / 4;
     }
 
-    .showcase-card-body {
-        --padding: 4rem;
-
+    .showcase-card > .showcase-card-body {
         grid-column: 4 / 6;
+    }
+
+    .showcase-card > .showcase-card-body > .wrapper {
+        padding: 0;
+        max-inline-size: 87.5%;
+    }
+
+}
+
+@media (min-width: 61em) {
+    .showcase-card > .showcase-card-body > .wrapper {
+        max-inline-size: 80%;
+    }
+}
+
+@media (min-width: 70em) {
+        .showcase-card > .showcase-card-body > .wrapper {
+        max-inline-size: 70%;
     }
 }
 
