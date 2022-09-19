@@ -303,14 +303,14 @@ body {
 
 /* SHOWCASE CARD */
 .showcase-card {
-    --flow: row;
-    --columns: 100%;
+    --auto-flow: row;
+    --template-columns: auto;
 
     inline-size: 100%;
 
     display: grid;
-    grid-auto-flow: var(--flow);
-    grid-template-columns: var(--columns);
+    grid-auto-flow: var(--auto-flow);
+    grid-template-columns: var(--template-columns);
 }
 
 .showcase-card > .showcase-card-body {
@@ -339,23 +339,22 @@ body {
 
 @media (min-width: 56.25em) {
     .showcase-card {
-        --flow: column;
-        --columns: repeat(5, 1fr);
+        --auto-flow: column;
+        --template-columns: repeat(10, 1fr);
     }
 
     .showcase-card > .showcase-card-thumbnail {
-        grid-column: 1 / 4;
+        grid-column: 1 / 7;
     }
 
     .showcase-card > .showcase-card-body {
-        grid-column: 4 / 6;
+        grid-column: 7 / 11;
     }
 
     .showcase-card > .showcase-card-body > .wrapper {
-        padding: 0;
         max-inline-size: 87.5%;
+        padding: 0;
     }
-
 }
 
 @media (min-width: 61em) {
@@ -387,6 +386,7 @@ body {
     align-items: center;
 
     position: absolute;
+    z-index: 99;
 }
 
 .hero-header .logo {
