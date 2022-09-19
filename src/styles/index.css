@@ -193,18 +193,52 @@ body {
     background-color: var(--clr-neutral-800);
 }
 
-@media (min-width: 48em) {
-    .carousel-drive-button {
-        --padding: 1.5em;
-    }
+/* CAROUSEL */
+.carousel {
+    display: grid;
+
+    position: relative;
 }
 
-/* CAROUSEL DRIVE BUTTON */
-.carousel .control-painel {
+.carousel > .control-painel {
     inline-size: max-content;
     
     display: grid;
     grid-auto-flow: column;
+
+    position: absolute;
+}
+
+@media(max-width: 56.1875em) {
+    .carousel > .control-painel {
+        right: 0;
+        top: calc((100vw / 1.573033) - 66.5px);
+    }
+}
+
+@media (min-width: 56.25em) {
+    .carousel {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+    }
+
+    .carousel > .carousel-slide {
+        grid-column: 1 / 11;
+    }
+
+    .carousel > .control-painel {
+        grid-column: 5 / 7;
+        justify-self: end;
+
+        bottom: 0;
+    }
+}
+
+@media (min-width: 78.5em) {
+    .carousel > .control-painel {
+        grid-column: 7 / 9;
+        justify-self: start;
+    }
 }
 
 /* NAVIGATION */
