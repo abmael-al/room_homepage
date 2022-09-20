@@ -164,7 +164,7 @@ body {
 
 /* others */
 .container {
-    --max-width: 1256px;
+    --max-width: 1440px;
 
     max-inline-size: var(--max-width);
     margin-inline: auto;
