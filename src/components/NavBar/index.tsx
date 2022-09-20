@@ -62,8 +62,7 @@ const NavBarMobile = () => {
             <div>
                 <ActionButton action='open' onClick={onClickHandler} />
             </div>
-
-            <div className={isNavHidden ? 'hidden' : 'flex overlay'}>
+            <div className={isNavHidden ? 'hidden' : 'flex'}>
                 <ActionButton action='close' onClick={onClickHandler} />
                 <NavList />
             </div>
