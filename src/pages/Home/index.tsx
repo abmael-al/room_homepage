@@ -33,7 +33,7 @@ const SHOWCASE_CARDS_INFO = [
 
 const HeroSection = () => {
     return (
-        <main>
+        <main className="hero">
             <header className="hero-header">
                 <Logo className="logo" />
                 <NavBar />
@@ -45,6 +45,31 @@ const HeroSection = () => {
                     )
                 }
             />
+
+            <section className="about-section">
+                <figure className='about-dark-image'>
+                    <img 
+                        className="dark-image"
+                        src='/images/image-about-dark.jpg'
+                        alt="An image depicting dark furniture."
+                    />
+                </figure>
+                
+                <div className="about-body">
+                    <h3 className="about-title secondary-heading">About our furniture</h3>
+                    <p className="about-copy">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. A sit quibusdam, dolores, tempore in, ducimus obcaecati vel iusto eveniet illum eaque ab voluptate nostrum nam libero numquam nulla quidem assumenda perferendis consequatur modi reiciendis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    </p>
+                </div>
+                
+                <figure className='about-light-image'>
+                    <img 
+                        className="light-image"
+                        src='/images/image-about-light.jpg'
+                        alt="An image depicting light furniture."
+                    />
+                </figure>
+            </section>
         </main>
     )
 }
