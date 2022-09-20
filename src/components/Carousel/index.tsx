@@ -18,7 +18,7 @@ interface CarouselProps {
 
 const Slide = ({ content }: SlideProps) => {
     return (
-        <div>
+        <div className='carousel-slide'>
             {content}
         </div>
     )
@@ -26,7 +26,7 @@ const Slide = ({ content }: SlideProps) => {
 
 const CarouselDriveButton = ({ onClick, scrollDirection }: CarouselDriveButtonProps) => {
     return (
-        <button className="carousel-drive-button" onClick={onClick}>
+        <button className='carousel-drive-button' onClick={onClick}>
             {scrollDirection === 'right'
                 ? <AngleRight style={{pointerEvents: 'none'}} />
                 : <AngleLeft style={{pointerEvents: 'none'}} />
