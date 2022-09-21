@@ -1,32 +1,49 @@
 import { PrimaryButton } from "../PrimaryButton"
 
+import { useWindowSize } from "../../hooks/usehooks"
+
 interface ShowcaseCardProps {
     title: string;
     supportingText: string;
     smallImage: string;
     largeImage: string;
-    smallImageWidth: number;
-    largeImageWidth: number;
+    altText: string;
+    callToActionButtonText: string;
 }
 
-const ShowcaseCard = ({ title, supportingText, smallImage, largeImage, smallImageWidth, largeImageWidth }: ShowcaseCardProps) => {
+const ShowcaseCard = (
+    { 
+        title, 
+        supportingText, 
+        smallImage, 
+        largeImage,
+        altText, 
+        callToActionButtonText
+    }: ShowcaseCardProps
+) => {
+    const windowSize = useWindowSize();
+    
     return (
         <div className="showcase-card">
-            <figure className="showcase-card-thumbnail">
-                <img 
-                    src={smallImage}
-                    alt=""
+            <div className="showcase-card-thumbnail">
+                <img
+                    src={
+                        windowSize.width < 375
+                        ? smallImage
+                        : largeImage
+                    }
+                    alt={altText}
                     loading="eager"
                     decoding="sync"
-                    srcSet={`${smallImage} ${smallImageWidth}w,
-                            ${largeImage} ${largeImageWidth}w`}
                 />
-            </figure>
+            </div>
+            
             <div className="showcase-card-body">
                 <div className="wrapper">
                     <h2 className="showcase-card-title primary-heading">{title}</h2>
                     <p className="showcase-card-supporting-text">{supportingText}</p>
-                    <PrimaryButton text='shop now' />
+                    
+                    <PrimaryButton text={callToActionButtonText} />
                 </div>
             </div>
         </div>
