@@ -10,24 +10,24 @@ const SHOWCASE_CARDS_INFO = [
         supportingText: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. A sit quibusdam, dolores, tempore in, ducimus obcaecati vel iusto eveniet illum eaque ab voluptate nostrum nam libero numquam nulla quidem assumenda perferendis consequatur modi reiciendis!',
         smallImage: '/images/mobile-image-hero-1.jpg',
         largeImage: '/images/desktop-image-hero-1.jpg',
-        smallImageWidth: 375,
-        largeImageWidth: 840,
+        altText: 'An image of furniture that consists of a table and two white chairs that are used in a kitchen for putting things on and for sitting, respectively. The table has a beautiful plant on it.',
+        callToActionButtonText: 'shop now',
     },
     { 
         title: 'Manufactured with the best materials',
         supportingText: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. A sit quibusdam, dolores, tempore in, ducimus obcaecati vel iusto eveniet illum eaque ab voluptate nostrum nam libero numquam nulla quidem assumenda perferendis consequatur modi reiciendis!',
         smallImage: '/images/mobile-image-hero-2.jpg',
         largeImage: '/images/desktop-image-hero-2.jpg',
-        smallImageWidth: 375,
-        largeImageWidth: 840,
+        altText: 'An image of furniture that consists of three chairs of light colors (one being accent) that are use in a room for general use.',
+        callToActionButtonText: 'shop now',
     },
     { 
         title: 'We are available all across the globe',
         supportingText: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. A sit quibusdam, dolores, tempore in, ducimus obcaecati vel iusto eveniet illum eaque ab voluptate nostrum nam libero numquam nulla quidem assumenda perferendis consequatur modi reiciendis!',
         smallImage: '/images/mobile-image-hero-3.jpg',
         largeImage: '/images/desktop-image-hero-3.jpg',
-        smallImageWidth: 375,
-        largeImageWidth: 840,
+        altText: 'An image of furniture that consists of a black chair that is used in a room for general use.',
+        callToActionButtonText: 'shop now',
     },
 ]
 
@@ -52,6 +52,8 @@ const HeroSection = () => {
                         className="dark-image"
                         src='/images/image-about-dark.jpg'
                         alt="An image depicting dark furniture."
+                        loading="lazy"
+                        decoding="async"
                     />
                 </figure>
                 
@@ -67,6 +69,8 @@ const HeroSection = () => {
                         className="light-image"
                         src='/images/image-about-light.jpg'
                         alt="An image depicting light furniture."
+                        loading="lazy"
+                        decoding="async"
                     />
                 </figure>
             </section>
