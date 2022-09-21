@@ -34,6 +34,9 @@
     --ff-secondary-heading: var(--ff-primary);
     --fw-secondary-heading: var(--fw-bold);
     --fs-secondary-heading: var(--fs-400);
+
+    /* interface patterns */
+    --padding-pattern: 3rem;
 }
 
 @media (min-width: 64em) {
@@ -270,15 +273,10 @@ body {
 }
 
 /* NAVIGATION */
-.navigation-bar-mobile {
-    --padding-100: 1.25rem;
-    --padding-200: 2.5rem;
-}
-
 .navigation-bar-mobile > :last-child {
     inline-size: 100%;
-    padding-inline: var(--padding-100);
-    padding-block: var(--padding-200);
+    padding-inline: calc(var(--padding-pattern) * 0.75);
+    padding-block: var(--padding-pattern);
     
     position: absolute;
     top: 0;
@@ -288,6 +286,20 @@ body {
     justify-content: space-between;
     
     background-color: var(--clr-neutral-100);
+}
+
+.navigation-bar-mobile > :last-child::before {
+    content: '';
+
+    inline-size: 100%;
+    block-size: 100%;
+
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+
+    background-color: rgb(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 
 .navigation-bar-desktop {
@@ -349,10 +361,8 @@ body {
 }
 
 .showcase-card > .showcase-card-body > .wrapper {
-    --padding: 3rem;
-
-    padding-inline: calc(var(--padding) * 0.75);
-    padding-block: var(--padding);
+    padding-inline: calc(var(--padding-pattern) * 0.75);
+    padding-block: var(--padding-pattern);
 
     display: grid;
     gap: 1.25rem;
@@ -399,8 +409,8 @@ body {
     --columns-width: 40% 60%;
 
     inline-size: 100%;
-    padding-inline-start: 1.5rem;
-    padding-block-start: 2.5rem;
+    padding-inline-start: calc(var(--padding-pattern) * 0.75);
+    padding-block-start: var(--padding-pattern);
 
     display: grid;
     grid-auto-flow: column;
@@ -450,14 +460,11 @@ body {
 .hero > .about-section .light-image {
     min-inline-size: 100%;
     min-block-size: 100%;
-    margin: auto;
 }
 
 .hero > .about-section > .about-body {
-    --padding: 3rem;
-
-    padding-inline: calc(var(--padding) * 0.75);
-    padding-block: var(--padding);
+    padding-inline: calc(var(--padding-pattern) * 0.75);
+    padding-block: var(--padding-pattern);
 
     display: grid;
     gap: 1.25rem;
@@ -519,7 +526,7 @@ body {
     }
     
     .hero > .about-section > .about-body {
-        --padding: 3.5rem;
+        --padding-pattern: 3.5rem;
 
         grid-row: 1 / 2;
         grid-column: 4 / 8;
