@@ -351,7 +351,7 @@ body {
 .showcase-card > .showcase-card-body > .wrapper {
     --padding: 3rem;
 
-    padding-inline: calc(var(--padding) * 0.5);
+    padding-inline: calc(var(--padding) * 0.75);
     padding-block: var(--padding);
 
     display: grid;
@@ -380,14 +380,8 @@ body {
     }
 
     .showcase-card > .showcase-card-body > .wrapper {
-        max-inline-size: 87.5%;
-        padding: 0;
-    }
-}
-
-@media (min-width: 61em) {
-    .showcase-card > .showcase-card-body > .wrapper {
         max-inline-size: 80%;
+        padding: 0;
     }
 }
 
