@@ -185,6 +185,11 @@ body {
     color: var(--clr-neutral-900);
 }
 
+.primary-button:hover,
+.primary-button:focus {
+    color: var(--clr-neutral-700);
+}
+
 /* CAROUSEL DRIVE BUTTON */
 .carousel-drive-button {
     --padding: 1em;
@@ -196,6 +201,12 @@ body {
     place-items: center;
 
     background-color: var(--clr-neutral-900);
+}
+
+@media (min-width: 90em) {
+    .carousel-drive-button {
+        --padding: 1.56em;
+    }
 }
 
 .carousel-drive-button:hover,
@@ -219,10 +230,17 @@ body {
     position: absolute;
 }
 
-@media(max-width: 56.1875em) {
+@media (max-width: 23.4375em) {
     .carousel > .control-painel {
         right: 0;
-        top: calc((100vw / 1.573033) - 66.5px);
+        top: calc((100vw / 1.041666) - 57px);
+    }
+}
+
+@media (min-width: 23.5em) and (max-width: 56.1875em) {
+    .carousel > .control-painel {
+        right: 0;
+        top: calc((100vw / 1.573033) - 57px);
     }
 }
 
