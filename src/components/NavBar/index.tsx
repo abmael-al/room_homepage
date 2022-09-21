@@ -41,10 +41,10 @@ const NavList = () => {
     return (
         <nav>
             <ul className='navigation-list'>
-                <NavItem text="home" link="." />
-                <NavItem text="shop" link="." />
-                <NavItem text="about" link="." />
-                <NavItem text="contact" link="." />
+                <NavItem key='1' text="home" link="." />
+                <NavItem key='2' text="shop" link="." />
+                <NavItem key='3' text="about" link="." />
+                <NavItem key='4' text="contact" link="." />
             </ul>
         </nav>
     )
@@ -62,8 +62,10 @@ const NavBarMobile = () => {
             <div>
                 <ActionButton action='open' onClick={onClickHandler} />
             </div>
+            
             <div className={isNavHidden ? 'hidden' : 'flex'}>
                 <ActionButton action='close' onClick={onClickHandler} />
+                
                 <NavList />
             </div>
         </div>
