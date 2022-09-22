@@ -1,10 +1,11 @@
 import { Home } from "./pages/Home"
+import { Container } from "./components/Container"
 
 const App = () => {
     return (
-        <div>
+        <Container>
             <Home />
-        </div>
+        </Container>
     )
 }
 

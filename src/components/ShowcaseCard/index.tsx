@@ -28,7 +28,7 @@ const ShowcaseCard = (
             <div className="showcase-card-thumbnail">
                 <img
                     src={
-                        windowSize.width < 375
+                        windowSize.width <= 375
                         ? smallImage
                         : largeImage
                     }

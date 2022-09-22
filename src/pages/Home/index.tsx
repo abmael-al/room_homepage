@@ -1,8 +1,9 @@
 import { NavBar } from "../../components/NavBar"
 import { Carousel } from "../../components/Carousel"
 import { ShowcaseCard } from "../../components/ShowcaseCard"
-
 import { ReactComponent as Logo } from "../../assets/icons/logo.svg"
+
+import { useWindowSize } from '../../hooks/usehooks'
 
 const SHOWCASE_CARDS_INFO = [
     { 
@@ -32,6 +33,10 @@ const SHOWCASE_CARDS_INFO = [
 ]
 
 const HeroSection = () => {
+    const windowSize = useWindowSize();
+
+    const shouldRender = windowSize.width < 900 || windowSize.width >= 1440;
+
     return (
         <main className="hero">
             <header className="hero-header">
@@ -64,15 +69,18 @@ const HeroSection = () => {
                     </p>
                 </div>
                 
-                <figure className='about-light-image'>
-                    <img 
-                        className="light-image"
-                        src='/images/image-about-light.jpg'
-                        alt="An image depicting light furniture."
-                        loading="lazy"
-                        decoding="async"
-                    />
-                </figure>
+                {
+                    shouldRender && 
+                    <figure className='about-light-image'>
+                        <img 
+                            className="light-image"
+                            src='/images/image-about-light.jpg'
+                            alt="An image depicting light furniture."
+                            loading="lazy"
+                            decoding="async"
+                        />
+                    </figure>
+                }
             </section>
         </main>
     )

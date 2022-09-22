@@ -22,8 +22,8 @@ const ActionButton = ({ onClick, action }: ActionButtonProps) => {
             onClick={onClick}
         >   
             {(action === 'open')
-                ? <OpeningIcon />
-                : <ClosingIcon />
+                ? <OpeningIcon className='pointer-events-none' />
+                : <ClosingIcon className='pointer-events-none' />
             }
         </button>
     )
@@ -51,10 +51,10 @@ const NavList = () => {
 }
 
 const NavBarMobile = () => {
-    const [isNavHidden, setIsNavHidden] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
 
     const onClickHandler = () => {
-        setIsNavHidden(!isNavHidden);
+        setIsOpen(!isOpen);
     }
 
     return (
@@ -63,7 +63,7 @@ const NavBarMobile = () => {
                 <ActionButton action='open' onClick={onClickHandler} />
             </div>
             
-            <div className={isNavHidden ? 'hidden' : 'flex'}>
+            <div className={isOpen ? 'flex' : 'hidden'}>
                 <ActionButton action='close' onClick={onClickHandler} />
                 
                 <NavList />
