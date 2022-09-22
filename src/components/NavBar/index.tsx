@@ -41,10 +41,10 @@ const NavList = () => {
     return (
         <nav>
             <ul className='navigation-list'>
-                <NavItem key='1' text="home" link="." />
-                <NavItem key='2' text="shop" link="." />
-                <NavItem key='3' text="about" link="." />
-                <NavItem key='4' text="contact" link="." />
+                <NavItem key='1' text='home' link='.' />
+                <NavItem key='2' text='shop' link='.' />
+                <NavItem key='3' text='about' link='.' />
+                <NavItem key='4' text='contact' link='.' />
             </ul>
         </nav>
     )
@@ -58,7 +58,7 @@ const NavBarMobile = () => {
     }
 
     return (
-        <div className="navigation-bar-mobile">
+        <div className='navigation-bar-mobile'>
             <div>
                 <ActionButton action='open' onClick={onClickHandler} />
             </div>

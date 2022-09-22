@@ -1,5 +1,5 @@
-import { Home } from "./pages/Home"
-import { Container } from "./components/Container"
+import { Home } from './pages/Home'
+import { Container } from './components/Container'
 
 const App = () => {
     return (

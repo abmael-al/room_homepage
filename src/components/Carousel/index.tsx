@@ -1,7 +1,7 @@
-import { ReactComponent as AngleLeft } from "../../assets/icons/icon-angle-left.svg"
-import { ReactComponent as AngleRight } from "../../assets/icons/icon-angle-right.svg"
+import { ReactComponent as AngleLeft } from '../../assets/icons/icon-angle-left.svg'
+import { ReactComponent as AngleRight } from '../../assets/icons/icon-angle-right.svg'
 
-import { useState } from "react";
+import { useState } from 'react';
 
 interface SlideProps {
     content: JSX.Element;
@@ -28,8 +28,8 @@ const CarouselDriveButton = ({ onClick, scrollDirection }: CarouselDriveButtonPr
     return (
         <button className='carousel-drive-button' onClick={onClick}>
             {scrollDirection === 'right'
-                ? <AngleRight style={{pointerEvents: 'none'}} />
-                : <AngleLeft style={{pointerEvents: 'none'}} />
+                ? <AngleRight className='pointer-events-none' />
+                : <AngleLeft className='pointer-events-none' />
             }
         </button>
     )

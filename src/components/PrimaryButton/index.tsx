@@ -1,4 +1,4 @@
-import { ReactComponent as Arrow } from "../../assets/icons/icon-arrow.svg"
+import { ReactComponent as Arrow } from '../../assets/icons/icon-arrow.svg'
 
 interface PrimaryButtonProps {
     text: string;

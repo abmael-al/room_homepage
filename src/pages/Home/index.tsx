@@ -1,7 +1,7 @@
-import { NavBar } from "../../components/NavBar"
-import { Carousel } from "../../components/Carousel"
-import { ShowcaseCard } from "../../components/ShowcaseCard"
-import { ReactComponent as Logo } from "../../assets/icons/logo.svg"
+import { NavBar } from '../../components/NavBar'
+import { Carousel } from '../../components/Carousel'
+import { ShowcaseCard } from '../../components/ShowcaseCard'
+import { ReactComponent as Logo } from '../../assets/icons/logo.svg'
 
 import { useWindowSize } from '../../hooks/usehooks'
 
@@ -38,9 +38,9 @@ const HeroSection = () => {
     const shouldRender = windowSize.width < 900 || windowSize.width >= 1440;
 
     return (
-        <main className="hero">
-            <header className="hero-header">
-                <Logo className="logo" />
+        <main className='hero'>
+            <header className='hero-header'>
+                <Logo className='logo' />
                 <NavBar />
             </header>
             
@@ -51,20 +51,20 @@ const HeroSection = () => {
                 }
             />
 
-            <section className="about-section">
+            <section className='about-section'>
                 <figure className='about-dark-image'>
                     <img 
-                        className="dark-image"
+                        className='dark-image'
                         src='/images/image-about-dark.jpg'
-                        alt="An image depicting dark furniture."
-                        loading="lazy"
-                        decoding="async"
+                        alt='An image depicting dark furniture.'
+                        loading='lazy'
+                        decoding='async'
                     />
                 </figure>
                 
-                <div className="about-body">
-                    <h3 className="about-title secondary-heading">About our furniture</h3>
-                    <p className="about-copy">
+                <div className='about-body'>
+                    <h3 className='about-title secondary-heading'>About our furniture</h3>
+                    <p className='about-copy'>
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. A sit quibusdam, dolores, tempore in, ducimus obcaecati vel iusto eveniet illum eaque ab voluptate nostrum nam libero numquam nulla quidem assumenda perferendis consequatur modi reiciendis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     </p>
                 </div>
@@ -73,11 +73,11 @@ const HeroSection = () => {
                     shouldRender && 
                     <figure className='about-light-image'>
                         <img 
-                            className="light-image"
+                            className='light-image'
                             src='/images/image-about-light.jpg'
-                            alt="An image depicting light furniture."
-                            loading="lazy"
-                            decoding="async"
+                            alt='An image depicting light furniture.'
+                            loading='lazy'
+                            decoding='async'
                         />
                     </figure>
                 }

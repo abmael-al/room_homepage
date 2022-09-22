@@ -1,6 +1,6 @@
-import { PrimaryButton } from "../PrimaryButton"
+import { PrimaryButton } from '../PrimaryButton'
 
-import { useWindowSize } from "../../hooks/usehooks"
+import { useWindowSize } from '../../hooks/usehooks'
 
 interface ShowcaseCardProps {
     title: string;
@@ -24,8 +24,8 @@ const ShowcaseCard = (
     const windowSize = useWindowSize();
     
     return (
-        <div className="showcase-card">
-            <div className="showcase-card-thumbnail">
+        <div className='showcase-card'>
+            <div className='showcase-card-thumbnail'>
                 <img
                     src={
                         windowSize.width <= 375
@@ -33,15 +33,15 @@ const ShowcaseCard = (
                         : largeImage
                     }
                     alt={altText}
-                    loading="eager"
-                    decoding="sync"
+                    loading='eager'
+                    decoding='sync'
                 />
             </div>
             
-            <div className="showcase-card-body">
-                <div className="wrapper">
-                    <h2 className="showcase-card-title primary-heading">{title}</h2>
-                    <p className="showcase-card-supporting-text">{supportingText}</p>
+            <div className='showcase-card-body'>
+                <div className='wrapper'>
+                    <h2 className='showcase-card-title primary-heading'>{title}</h2>
+                    <p className='showcase-card-supporting-text'>{supportingText}</p>
                     
                     <PrimaryButton text={callToActionButtonText} />
                 </div>
